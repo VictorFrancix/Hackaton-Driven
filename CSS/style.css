@@ -97,6 +97,7 @@ header img{
 }
 span{
     font-size: 30px;
-
-    color: yellowgreen;
+     display: flex;
+     flex-direction: column-reverse;
+     color: black;
 }
