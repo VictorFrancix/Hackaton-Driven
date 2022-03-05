@@ -16,7 +16,7 @@ function showPosition(position) {
     }
 
 function accessDenied(erro) {
-    console.log("Deu ruim");
+    switchScreens();
 }
 
 getLocation();
@@ -75,5 +75,13 @@ function showTemp() {
 
     
     let clima = document.querySelector(".resposta");
-    clima.innerHTML = tempServidor.main.temp;
+    clima.innerHTML = `${tempServidor.main.temp} ºC`;
+}
+
+function switchScreens() {
+    let screenHTML = document.querySelector(".tela1");
+    screenHTML.classList.toggle("escondido");
+
+    screenHTML = document.querySelector(".tela2");
+    screenHTML.classList.toggle("escondido");
 }
